@@ -1,0 +1,45 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/home/josemaria/Pictures/89787.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #d1bfbf; /* Adjust text color to match target website */
+  z-index: 2; /* Ensure content is above translucent layer */
+}
+
+button {
+  float: right;
+  background-color: #445660; /* Adjust button background color to match target website */
+  color: white; /* Adjust button text color to ensure contrast */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity to match target website */
+  z-index: 1; /* Ensure translucent layer is behind content */
+}
+
+@media (max-width: 768px) {
+  .content {
+    left: 5%;
+  }
+}

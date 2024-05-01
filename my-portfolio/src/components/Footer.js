@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './footer.css'; // Assuming you'll create a CSS file for styling
+
 function Footer() {
   return (
-    <footer>
-      <p>&copy; 2024 My Portfolio</p>
+    <footer className="footer">
+      <p>&copy; Wojtya on Github</p>
     </footer>
   );
 }

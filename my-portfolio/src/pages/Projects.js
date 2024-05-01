@@ -2,21 +2,27 @@ import React from 'react';
 import Project from '../components/Project';
 
 function Projects() {
+  const projects = [
+    {
+      title: 'About',
+      description: 'Description ...',
+      link: 'https://github.com/Wojtya/Arduino-projects',
+    },
+    {
+      title: 'About',
+      description: 'Description ...',
+      link: 'https://github.com/Wojtya/MLG/blob/main/EDA.py',
+    },
+    /* Add more projects as needed */
+  ];
+
   return (
-    <div className="projects">
-      <h2>Projects</h2>
+    <div className="projects">  {/* Container with grid layout */}
+      <h2>Projects</h2>  {/* Projects heading */}
       <div className="project-list">
-        <Project
-          title="Project 1"
-          description="Description of Project 1."
-          link="https://github.com/yourusername/project1"
-        />
-        <Project
-          title="Project 2"
-          description="Description of Project 2."
-          link="https://github.com/yourusername/project2"
-        />
-        {/* Add more projects as needed */}
+        {projects.map((project) => (
+          <Project key={project.title} {...project} />
+        ))}
       </div>
     </div>
   );

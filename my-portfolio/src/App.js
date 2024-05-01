@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import BlogPosts from './pages/BlogPosts';
 import Footer from './components/Footer';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
@@ -15,12 +12,12 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/blog" component={BlogPosts} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+           
+          </Routes>
         </main>
         <Footer />
       </div>

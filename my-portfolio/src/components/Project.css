@@ -1,0 +1,50 @@
+/* Main container with background image */
+.projects {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px); /* Adjust height to leave space for header and footer */
+    background-image: url('/home/josemaria/Pictures/6150433.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start; /* Align grid to the left */
+    align-items: center;
+    padding-left: 20px; /* Add some padding to separate projects from the left edge */
+}
+
+/* Project container */
+.project {
+    background-color: hwb(225 25% 39%); /* Adjust to match website theme */
+    padding: 20px;
+    width: 950px; /* Set fixed width for each project */
+    height: 150px; /* Set fixed height for each project */
+    border: 1px solid #172341; /* Example border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 10px; /* Adjust margin for spacing between projects */
+    box-shadow: 0 5px 10px rgba(196, 191, 191, 0.2); /* Add subtle shadow for depth */
+}
+
+/* Project grid items */
+.projects h2 {
+    margin-top: 0; /* Remove default margin for heading */
+    color: hwb(30 51% 27%); /* Adjust text color to make it brighter */
+    font-size: 44px; /* Increase font size */
+}
+
+.projects::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(213, 193, 193, 0.5); /* Adjust background color and opacity to match target website */
+    z-index: 1; /* Ensure translucent layer is behind content */
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+    .content {
+        left: 10%;
+    }
+}

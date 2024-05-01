@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Project.css'; // Assuming you'll create a CSS file for styling
+
 function Project({ title, description, link }) {
   return (
     <div className="project">

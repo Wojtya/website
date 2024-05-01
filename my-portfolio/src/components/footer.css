@@ -1,0 +1,14 @@
+.footer {
+    background-color: #333; /* Example background color */
+    color: #dfc7c7; /* Example text color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
